@@ -268,7 +268,7 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 .photo-cover{ min-height:100vh; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; background:var(--navy-deep); color:var(--panel); }
 .photo-cover > img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center center; animation:coverZoom 18s ease-out both; }
 .photo-cover-shade{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(27,40,64,0.48) 0%, rgba(27,40,64,0.05) 38%, rgba(27,40,64,0.72) 100%); }
-.photo-cover-content{ position:relative; z-index:1; width:min(760px, 90%); padding:150px 24px 100px; text-align:center; text-shadow:0 2px 18px rgba(27,40,64,0.7); }
+.photo-cover-content{ position:relative; z-index:1; width:min(760px, 90%); padding:150px 24px 100px; text-align:center; text-shadow:0 2px 18px rgba(27,40,64,0.7); transform:translateY(58px); }
 .cover-kicker{ color:var(--gold-soft); font-size:12px; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; }
 .photo-cover h1{ margin:26px 0 24px; color:var(--panel); font-family:'Cormorant Garamond',serif; font-size:clamp(58px, 11vw, 118px); font-weight:500; letter-spacing:0.04em; line-height:0.95; }
 .photo-cover h1 em{ color:var(--gold-soft); font-size:0.65em; font-style:italic; }
@@ -293,6 +293,7 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 @keyframes coverContentIn{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
 @media (max-width: 680px){ .photo-cover > img{ object-fit:cover; object-position:center 58%; } }
 @media (max-width: 680px){
+  .photo-cover-content{ transform:translateY(42px); }
   .story-intro{ font-size:18px; }
   .story-ending p{ font-size:23px; }
   .cover-countdown{ gap:8px; margin-top:22px; }
