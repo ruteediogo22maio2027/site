@@ -293,6 +293,7 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 @keyframes coverContentIn{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
 @media (min-width: 681px){ .photo-cover > img{ object-fit:cover; object-position:center 38%; } }
 @media (min-width: 681px){ .photo-cover-content{ transform:translateY(78px); } }
+@media (min-width: 681px){ .cover-scroll{ left:auto; right:28px; bottom:22px; min-width:240px; transform:none; } }
 @media (max-width: 680px){ .photo-cover > img{ object-fit:cover; object-position:center 58%; } }
 @media (max-width: 680px){
   .photo-cover-content{ transform:translateY(42px); }
