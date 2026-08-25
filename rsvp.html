@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSVP — Rute &amp; Diogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Alex+Brush&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="casament-site/styles.css">
+</head>
+<body>
+
+<a href="index.html" class="brand-chip">R &amp; D</a>
+<button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+  <span class="bars"><span></span><span></span><span></span></span>
+</button>
+
+<nav class="nav-overlay">
+  <div>
+    <ul>
+      <li><a href="index.html" class="nav-link">Início</a></li>
+      <li><a href="historia.html" class="nav-link">Nossa História</a></li>
+      <li><a href="detalhes.html" class="nav-link">O Grande Dia</a></li>
+      <li><a href="rsvp.html" class="nav-link active">RSVP</a></li>
+      <li><a href="presentes.html" class="nav-link">Presentes</a></li>
+    </ul>
+    <p class="nav-foot">22 · 05 · 2027</p>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <span class="eyebrow reveal">Confirmem a vossa vinda</span>
+  <h2 class="section-title reveal">Vão estar lá?</h2>
+  <p class="section-sub reveal">Confirmem até 1 de abril de 2027</p>
+
+  <div class="rsvp-card reveal">
+    <form id="rsvp-form">
+      <div class="field">
+        <label for="nome">O teu nome</label>
+        <input type="text" id="nome" name="nome" required placeholder="Nome e apelido">
+      </div>
+      <div class="field">
+        <label>Vais poder vir?</label>
+        <div class="attend-toggle">
+          <input type="radio" id="vou" name="presenca" value="Vou" checked>
+          <label for="vou">Vou</label>
+          <input type="radio" id="nao-vou" name="presenca" value="Não vou">
+          <label for="nao-vou">Não vou poder</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="acompanhantes">Quantas pessoas no total (contigo incluído/a)</label>
+        <input type="number" id="acompanhantes" name="acompanhantes" min="1" value="1">
+      </div>
+      <div class="field">
+        <label for="restricoes">Alguma restrição alimentar ou alergia?</label>
+        <textarea id="restricoes" name="restricoes" rows="3" placeholder="Ex: vegetariano, sem glúten... ou deixa em branco"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Enviar confirmação</button>
+      <p class="rsvp-msg ok" id="rsvp-ok">Confirmação recebida, obrigado! (modo demonstração — vê o comentário no topo de script.js)</p>
+      <p class="rsvp-msg err" id="rsvp-err">Algo correu mal. Tenta outra vez ou escreve-nos diretamente.</p>
+    </form>
+  </div>
+</div>
+
+<nav class="page-nav">
+  <a href="detalhes.html">← O grande dia</a>
+  <a href="presentes.html">Presentes →</a>
+</nav>
+
+<footer>
+  <p class="script">Mal podemos esperar por celebrar convosco</p>
+  <p class="hashtag">#RuteEDiogo2027</p>
+</footer>
+
+<script src="casament-site/script.js"></script>
+</body>
+</html>
