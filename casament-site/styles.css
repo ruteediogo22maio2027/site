@@ -270,7 +270,7 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 .photo-cover-shade{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(27,40,64,0.48) 0%, rgba(27,40,64,0.05) 38%, rgba(27,40,64,0.72) 100%); }
 .photo-cover-content{ position:relative; z-index:1; width:min(760px, 90%); padding:150px 24px 100px; text-align:center; text-shadow:0 2px 18px rgba(27,40,64,0.7); transform:translateY(58px); }
 .cover-kicker{ color:var(--gold-soft); font-size:12px; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; }
-.photo-cover h1{ margin:26px 0 24px; color:var(--panel); font-family:'Cormorant Garamond',serif; font-size:clamp(58px, 11vw, 118px); font-weight:500; letter-spacing:0.04em; line-height:0.95; }
+.photo-cover h1{ margin:26px 0 24px; color:var(--panel); font-family:'Cormorant Garamond',serif; font-size:clamp(58px, 8vw, 96px); font-weight:500; letter-spacing:0.04em; line-height:0.95; }
 .photo-cover h1 em{ color:var(--gold-soft); font-size:0.65em; font-style:italic; }
 .cover-date{ color:var(--panel); font-size:15px; font-weight:600; letter-spacing:0.19em; text-transform:uppercase; }
 .cover-date span{ color:var(--gold-soft); padding:0 8px; }
@@ -291,6 +291,7 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 .photo-cover-content .cover-scroll{ animation-delay:1.2s; }
 @keyframes shadeIn{ from{ opacity:0; } to{ opacity:1; } }
 @keyframes coverContentIn{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
+@media (min-width: 681px){ .photo-cover > img{ object-fit:cover; object-position:center 38%; } }
 @media (max-width: 680px){ .photo-cover > img{ object-fit:cover; object-position:center 58%; } }
 @media (max-width: 680px){
   .photo-cover-content{ transform:translateY(42px); }
