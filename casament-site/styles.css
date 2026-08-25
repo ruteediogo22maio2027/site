@@ -279,7 +279,7 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 .cover-countdown .box{ min-width:58px; padding:8px 10px 6px; border-top:1px solid rgba(238,214,165,0.75); border-bottom:1px solid rgba(238,214,165,0.75); }
 .cover-countdown .num{ color:var(--panel); font-size:29px; text-shadow:0 2px 10px rgba(27,40,64,0.8); }
 .cover-countdown .label{ color:var(--gold-soft); text-shadow:0 1px 8px rgba(27,40,64,0.8); }
-.cover-scroll{ position:absolute; left:50%; bottom:35px; display:flex; flex-direction:column; align-items:center; gap:11px; color:var(--panel); font-size:11px; letter-spacing:0.18em; text-decoration:none; text-transform:uppercase; transform:translateX(-50%); }
+.cover-scroll{ position:absolute; left:50%; bottom:35px; z-index:2; display:flex; flex-direction:column; align-items:center; gap:11px; color:var(--panel); font-size:11px; letter-spacing:0.18em; text-decoration:none; text-transform:uppercase; transform:translateX(-50%); cursor:pointer; pointer-events:auto; }
 .cover-scroll i{ width:1px; height:38px; background:var(--gold-soft); }
 @keyframes coverZoom{ from{ transform:scale(1); } to{ transform:scale(1.06); } }
 .photo-cover-shade{ animation:shadeIn 1.2s ease both; }
@@ -292,6 +292,7 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 @keyframes shadeIn{ from{ opacity:0; } to{ opacity:1; } }
 @keyframes coverContentIn{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
 @media (min-width: 681px){ .photo-cover > img{ object-fit:cover; object-position:center 38%; } }
+@media (min-width: 681px){ .photo-cover-content{ transform:translateY(78px); } }
 @media (max-width: 680px){ .photo-cover > img{ object-fit:cover; object-position:center 58%; } }
 @media (max-width: 680px){
   .photo-cover-content{ transform:translateY(42px); }
