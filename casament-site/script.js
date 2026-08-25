@@ -42,36 +42,3 @@ if (cdDias){
   setInterval(atualizarContagem, 1000);
 }
 
-// ---------- RSVP (só existe na página rsvp.html) ----------
-// AQUI: cola o URL do Google Apps Script ou Formspree. Vazio = modo demonstração.
-const FORM_ENDPOINT = "";
-const form = document.getElementById("rsvp-form");
-if (form){
-  const msgOk = document.getElementById("rsvp-ok");
-  const msgErr = document.getElementById("rsvp-err");
-
-  form.addEventListener("submit", async function(e){
-    e.preventDefault();
-    msgOk.style.display = "none";
-    msgErr.style.display = "none";
-    const dados = {
-      nome: document.getElementById("nome").value,
-      presenca: form.querySelector('input[name="presenca"]:checked').value,
-      acompanhantes: document.getElementById("acompanhantes").value,
-      restricoes: document.getElementById("restricoes").value,
-      enviado_em: new Date().toISOString()
-    };
-    if (!FORM_ENDPOINT){
-      msgOk.style.display = "block";
-      form.reset();
-      return;
-    }
-    try{
-      await fetch(FORM_ENDPOINT, { method:"POST", mode:"no-cors", headers:{"Content-Type":"application/json"}, body: JSON.stringify(dados) });
-      msgOk.style.display = "block";
-      form.reset();
-    }catch(erro){
-      msgErr.style.display = "block";
-    }
-  });
-}

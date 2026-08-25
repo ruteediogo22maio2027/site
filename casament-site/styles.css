@@ -195,8 +195,9 @@ body.theme-dark .tl-time{ color: var(--gold-soft); }
 .tl-label{ font-size: 15px; opacity: 0.85; margin-top: 2px; }
 
 /* ---------- RSVP ---------- */
-.rsvp-card{ max-width: 560px; margin: 0 auto; border: 2px solid var(--navy-deep); background: var(--panel); padding: 50px 42px; position:relative; }
+.rsvp-card{ max-width: 720px; margin: 0 auto; border: 2px solid var(--navy-deep); background: var(--panel); padding: 34px 26px; position:relative; }
 .rsvp-card::before{ content:""; position:absolute; inset: 9px; border: 1px solid var(--navy-deep); pointer-events:none; }
+.google-form{ display:block; width:100%; min-height: 850px; border:0; position:relative; z-index:1; background:var(--panel); }
 .field{ margin-bottom: 24px; text-align:left; }
 .field label{ display:block; font-size: 14px; letter-spacing: 0.05em; color: var(--navy-deep); margin-bottom: 8px; font-weight:600; }
 .field input[type="text"], .field input[type="number"], .field textarea{
@@ -213,6 +214,7 @@ body.theme-dark .tl-time{ color: var(--gold-soft); }
 .rsvp-msg{ margin-top: 18px; font-weight:600; display:none; }
 .rsvp-msg.ok{ color: var(--navy-deep); }
 .rsvp-msg.err{ color: #9C4B3E; }
+@media (max-width: 680px){ .rsvp-card{ padding: 24px 14px; } .google-form{ min-height: 980px; } }
 
 /* ---------- presentes ---------- */
 .gift-card{ max-width: 560px; margin: 0 auto; text-align:center; border: 2px solid var(--navy-deep); background: var(--panel); padding: 50px 40px; position:relative; }
