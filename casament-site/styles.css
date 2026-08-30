@@ -351,8 +351,14 @@ blockquote.story-intro{
 .story-ending a:hover span{ transform: translateX(3px); }
 @media (max-width: 680px){
   .story-line{ gap: 84px; padding-top:0; }
-  .story-line::before{ left:24px; }
-  .story-item, .story-item:nth-child(even){ display:flex; flex-direction:column; align-items:stretch; gap:28px; padding-left:0; direction:ltr; }
+  .story-line::before{ left:24px; top:18px; bottom:18px; }
+  .story-item, .story-item:nth-child(even){
+    display:flex; flex-direction:column; align-items:stretch; gap:28px;
+    padding-left: 48px; direction:ltr; position:relative;
+  }
+  .story-item::before{
+    left:24px; top:24px; transform:translate(-50%, 0);
+  }
   .story-item .ph, .story-item:nth-child(1) .ph{ aspect-ratio: 4/3; border: 2px solid var(--sand-deep); }
   .story-text{ max-width:none; text-align:left; }
   .story-text h3{ font-size:32px; margin-top: 6px; }
