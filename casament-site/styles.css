@@ -165,6 +165,9 @@ body.theme-dark .section-title{ color: var(--on-dark); }
   color: var(--navy);
   font-style: italic;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .story-intro p{ margin: 0; }
 .story-intro cite,
@@ -179,6 +182,7 @@ body.theme-dark .section-title{ color: var(--on-dark); }
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 600;
+  white-space: normal;
 }
 blockquote.story-intro{
   border-left: 2px solid var(--gold);
@@ -186,6 +190,10 @@ blockquote.story-intro{
   padding: 8px 24px 10px;
   background: rgba(199,161,106,0.04);
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* ---------- home cover ---------- */
@@ -349,7 +357,8 @@ blockquote.story-intro{
   .story-text{ max-width:none; text-align:left; }
   .story-text h3{ font-size:32px; margin-top: 6px; }
   .story-item:hover .ph{ transform:none; box-shadow: 0 10px 28px rgba(29,45,63,0.14); }
-  .story-intro{ font-size: 19px; line-height: 1.7; }
+  .story-intro{ font-size: 18px; line-height: 1.6; }
+  .story-intro p{ word-spacing: 0.1em; }
   .story-ending p{ font-size: 25px; }
   .page-wrap{ padding: 130px 20px 50px; }
 }
