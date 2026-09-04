@@ -378,7 +378,13 @@ blockquote.story-intro{
 /* ---------- detalhes ---------- */
 .details-intro span{ color: var(--gold-soft); padding: 0 8px; }
 .details-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-bottom: 34px; }
-@media (max-width: 720px){ .details-grid{ grid-template-columns: 1fr; } }
+@media (max-width: 720px){
+  .details-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .detail-card{ padding: 22px 8px 18px; }
+  .detail-card h3{ font-size: 21px; }
+  .detail-card p{ font-size: 13px; }
+  .map-frame{ height: 125px; }
+}
 .detail-card{ position:relative; background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.035)); border: 1px solid rgba(45,65,89,0.28); padding: 30px 28px 24px; text-align:center; box-shadow: var(--shadow); overflow:hidden; }
 body.theme-dark .detail-card{ border-color: rgba(243,236,218,0.35); }
 .detail-card::before{ content:""; position:absolute; top:0; left:0; width:100%; height:3px; background: var(--gold); transform:scaleX(0.25); transform-origin:left; transition:transform 0.4s ease; }
@@ -447,6 +453,22 @@ body.theme-dark .tl-time{ color: var(--gold-soft); }
 .gift-card::before{ content:""; position:absolute; inset:9px; border: 1px solid var(--navy-deep); pointer-events:none; }
 .gift-card p{ max-width: 460px; margin: 14px auto 0; }
 .gift-card strong{ color: var(--navy-deep); }
+.iban-copy{ width:100%; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:6px 10px; }
+.iban-copy-labeled{ margin-top:14px; }
+.iban-copy p{ width:max-content; max-width:100%; margin:0; }
+.copy-btn{ width:32px; height:32px; padding:0; border:1px solid var(--gold); border-radius:4px; background:rgba(251,248,242,0.7); color:var(--navy-deep); cursor:pointer; box-shadow:0 2px 8px rgba(29,45,63,0.1); transition:background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease; }
+.copy-btn span,
+.copy-btn span::after{ display:block; width:11px; height:12px; border:1.5px solid currentColor; }
+.copy-btn span{ position:relative; margin:8px auto 0; }
+.copy-btn span::after{ content:""; position:absolute; left:3px; top:-4px; background:var(--paper-strong); }
+.copy-btn:hover{ background:var(--gold-soft); border-color:var(--gold); transform:translateY(-1px); }
+.copy-btn.copied{ background:var(--gold); border-color:var(--gold); color:var(--paper-strong); }
+.copy-btn:focus-visible{ outline:3px solid rgba(199,161,106,0.55); outline-offset:3px; }
+.copy-status{ flex-basis:100%; min-height:1.5em; color:var(--navy-deep); font-size:14px; }
+@media (max-width: 400px){
+  .iban-copy p{ font-size:12px; }
+  .copy-btn{ width:30px; height:30px; }
+}
 
 /* ---------- navegação entre páginas (prev/next) ---------- */
 .page-nav{
@@ -507,8 +529,8 @@ footer .hashtag{ margin-top: 10px; letter-spacing: 0.14em; font-size: 13px; text
 .cover-countdown .box{ min-width:58px; padding:8px 10px 6px; border-top:1px solid rgba(238,214,165,0.75); border-bottom:1px solid rgba(238,214,165,0.75); }
 .cover-countdown .num{ color:var(--panel); font-size:29px; text-shadow:0 2px 10px rgba(27,40,64,0.8); }
 .cover-countdown .label{ color:var(--gold-soft); text-shadow:0 1px 8px rgba(27,40,64,0.8); }
-.cover-scroll{ position:absolute; left:50%; bottom:0; z-index:2; display:flex; flex-direction:column; align-items:center; gap:11px; min-width:280px; min-height:90px; padding:14px 26px 18px; color:var(--navy-darker); background:var(--gold); border:1px solid var(--gold-soft); font-size:11px; letter-spacing:0.18em; text-decoration:none; text-transform:uppercase; transform:translate(-50%, 24px); cursor:pointer; pointer-events:auto; text-shadow:none; transition:background 0.2s ease, transform 0.2s ease; }
-.cover-scroll:hover{ background:var(--gold-soft); }
+.cover-scroll{ position:absolute; left:50%; bottom:0; z-index:2; display:flex; flex-direction:column; align-items:center; gap:11px; min-width:280px; min-height:90px; padding:14px 26px 18px; color:var(--gold-soft); background:transparent; border:0; font-size:11px; letter-spacing:0.18em; text-decoration:none; text-transform:uppercase; transform:translate(-50%, 24px); cursor:pointer; pointer-events:auto; text-shadow:none; transition:color 0.2s ease, transform 0.2s ease; }
+.cover-scroll:hover{ color:var(--paper-strong); }
 .cover-scroll i{ width:1px; height:38px; background:var(--navy-darker); }
 @keyframes coverZoom{ from{ transform:scale(1); } to{ transform:scale(1.06); } }
 .photo-cover-shade{ animation:shadeIn 1.2s ease both; }
